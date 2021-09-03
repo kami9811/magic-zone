@@ -1,17 +1,12 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+  <ion-toolbar color="pink">
+    <ion-title><ion-img id="icon" src="../../assets/icon/icon.png"></ion-img></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="top" class="ion-padding">各種設定</div>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button expand="block" color="blue" (click)="logout()">ログアウト</ion-button>
+
 </ion-content>

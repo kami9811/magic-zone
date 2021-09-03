@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="pink">
+    <ion-title><ion-img id="icon" src="../../assets/icon/icon.png"></ion-img></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img class="ion-padding" src="../../assets/logo.png"></ion-img>
+  <div id="top">ログイン</div>
+  <form class="ion-padding" (submit)="navigate()">
+    <ion-item lines="full" class="ion-padding-bottom">
+      <ion-label position="floating">ユーザID</ion-label>
+      <ion-input required type="text" [(ngModel)]="id" name="id"></ion-input>
+      <ion-label position="floating">パスワード</ion-label>
+      <ion-input required type="password" [(ngModel)]="password" name="password"></ion-input>
+    </ion-item>
+    <!--
+    <div class="button-area">
+      <button type="submit" id="login-button" class="button">ログイン</button>
+    </div>
+    -->
+    <ion-button type="submit" expand="block" color="pink" class="">ログイン</ion-button>
+  </form>
+  <!--
+  <div class="button-area">
+    <button (click)="navigateToSignup()" class="button">新規登録</button>
+  </div>
+  -->
+  <ion-button id="bottom-button" expand="block" fill="outline" color="pink" (click)="navigateToSignup()">新規登録はこちら</ion-button>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="pink">
+    <ion-buttons slot="start">
+      <ion-back-button id="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>魔法陣一覧</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngFor="let list of magicList">
+    <ion-card button="true">
+      <ion-card-header (click)="presentModal(list.name, list.id)">
+        <ion-card-title>{{list.name}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ng-container>
+</ion-content>

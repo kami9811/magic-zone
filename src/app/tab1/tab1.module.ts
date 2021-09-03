@@ -7,14 +7,19 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
+import { LineChartComponent } from '../line-chart/line-chart.component';
+import { ChartsModule } from 'ng2-charts';
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    ChartsModule
   ],
-  declarations: [Tab1Page]
+  exports: [LineChartComponent],
+  declarations: [Tab1Page, LineChartComponent]
 })
 export class Tab1PageModule {}

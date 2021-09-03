@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="pink">
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center ion-padding-top">
+    <canvas #myCanvas class="magiczone" width="300" height="300"></canvas>
+  </div>
+  <div *ngIf="useFlag">
+    <ion-button class="ion-padding" expand="block" color="blue" fill="outline" disabled="true">状態</ion-button>
+    <div class="center">{{status}}</div>
+    <ion-button class="ion-padding" expand="block" color="blue" fill="outline" disabled="true">威力</ion-button>
+    <div class="center">{{power}}</div>
+    <ion-button *ngIf="outputFlag" class="ion-padding" expand="block" color="pink" (click)="output()">発動！</ion-button>
+    <ion-button *ngIf="closeFlag" class="ion-padding" expand="block" color="pink" (click)="dismiss()">CLOSE</ion-button>
+  </div>
+  <div *ngIf="listFlag">
+    <ion-button class="ion-padding" expand="block" color="blue" fill="outline" disabled="true">要求音量</ion-button>
+    <div class="center">{{require}}</div>
+    <ion-button class="ion-padding" expand="block" color="blue" fill="outline" disabled="true">補正威力</ion-button>
+    <div class="center">{{magnification}}</div>
+    <ion-button class="ion-padding" expand="block" color="pink" (click)="dismiss()">CLOSE</ion-button>
+  </div>
+  <div *ngIf="historyFlag">
+    <ion-button class="ion-padding" expand="block" color="blue" fill="outline" disabled="true">状態</ion-button>
+    <div class="center">{{result}}</div>
+    <ion-button class="ion-padding" expand="block" color="blue" fill="outline" disabled="true">威力</ion-button>
+    <div class="center">{{power}}</div>
+    <ion-button class="ion-padding" expand="block" color="pink" (click)="dismiss()">CLOSE</ion-button>
+  </div>
+</ion-content>

@@ -1,17 +1,27 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="pink">
+    <ion-title><ion-img id="icon" src="../../assets/icon/icon.png"></ion-img></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <app-line-chart class="ion-padding"></app-line-chart>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="ion-padding">
+    <div class="ion-padding-bottom">現在のストレス: {{stress*100}} [%]</div>
+    <ion-progress-bar class="ion-margin-bottom" [value]="stress" [buffer]="stress" color="blue"></ion-progress-bar>
+  </div>
+
+  <div class="ion-padding">
+    <div class="ion-padding-bottom">魔力階級</div>
+    <div class="big-text">{{level}}</div>
+  </div>
+
+  <ion-button class="ion-margin-top" expand="block" color="pink" (click)="navigateToMagic()" strong>魔法陣を描く</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="pink" (click)="navigateToList()">
+      <ion-icon name="newspaper-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
